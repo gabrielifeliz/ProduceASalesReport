@@ -1,0 +1,49 @@
+Design a program that will read a file of sales records and produce a sales report. Each record in the file contains a customer's number and name, a sales amount and a tax code. The tax code is to be applied to the sales amount to determine the sales tax due for that sale, as follows: 
+Tax Code	Sales Tax
+0			tax exempt
+1			3%
+2			5%
+The report must print a heading, "Sales Report", followed by detail lines. Each detail line must list the customer number, name, sales amount, sales tax and the total amount due.
+------------------------------------------------------------------------------------------------------------
+
+INPUTS
+customer_number
+customer_name
+sales_amount
+tax_code
+
+OUTPUTS
+Sales Report headind
+customer_number
+customer_name
+sales_amount
+sales_tax
+total_amount_due
+
+PROCESSING STEPS
+Print Sales Report heading
+Read sales record
+Calculate sales_tax and total_amount_due
+Display customer_number, customer_name, sales_amount, 
+sales_tax, total_amount_due
+
+PSEUDOCODE
+Print_Sales_Report
+Print "Sales Report" heading
+    Read sales record
+	IF tax_code == 0 
+		Set sales_tax = 0
+		Set total_amount_due = sales_amount
+	ELSE IF tax_code == 1
+		Calculate sales_tax = sales_amount * 0.03
+		Calculate total_amount_due = sales_amount + sales_tax
+	ELSE IF tax_code == 2
+		Calculate sales_tax = sales_amount * 0.05
+		Calculate total_amount_due = sales_amount + sales_tax
+	ENDIF	
+	DOWHILE morerecords exist
+        Print customer_number, customer_name, sales_amount, sales_tax, total_amount_due
+	Read sales record	
+    ENDDO
+END
+--------------------------------------------------------------------------------------------------------------
