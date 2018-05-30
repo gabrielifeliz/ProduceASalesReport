@@ -13,7 +13,7 @@ sales_amount
 tax_code
 
 OUTPUTS
-Sales Report headind
+Sales Report heading
 customer_number
 customer_name
 sales_amount
